@@ -7,7 +7,5 @@
 browser-sync start --server --directory  --files "**/*"
 ```
 
-Things to do:
-Filter
-Frontend
+
 
