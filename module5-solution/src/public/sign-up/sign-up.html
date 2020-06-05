@@ -1,0 +1,14 @@
+<form class="signUp center-block" name="signupForm" novalidate>
+		First Name: <br><input type="text" ng-model="signup.fName" name="fname" minlength="4" required><br>
+		Last Name:  <br><input type="text" ng-model="signup.lName" name="lname" minlength="2" required><br>
+		Email Address: <br><input type="email" ng-model="signup.email" name="email" required><br>
+		Phone Number(XXXX-XXX-XXXX): <br>
+		<input type="tel" ng-model="signup.phoneNum" pattern="^\d{4}-\d{3}-\d{4}$" name="phoneNum" required><br>
+		Favorite Menu Number: <br><input type="text" ng-model="signup.short_name" name="menuNum"><br>
+		<span ng-if="signup.serverError">No such menu number exists</span><br>
+		<button ng-disabled="signupForm.$invalid" ng-click="signup.submit()">Sign Up!</button><br>
+
+		<span ng-if="signupForm.fname.$error.required && signupForm.fname.$touched">Invalid Name!</span>
+		<span ng-if="signup.flag === 1">Your information has been saved</span>
+</form>
+	
